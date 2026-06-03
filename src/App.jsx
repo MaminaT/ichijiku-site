@@ -194,6 +194,7 @@ export default function App() {
     { href: "#story",    label: "ストーリー" },
     { href: "#products", label: "商品一覧"  },
     { href: "#season",   label: "収穫情報"  },
+    { href: "#media",    label: "📷 SNS"    },
   ];
 
   return (
@@ -480,6 +481,82 @@ export default function App() {
         </div>
         <p style={{ marginTop:"1.5rem", fontSize:"0.72rem", color:"rgba(250,245,238,0.4)", letterSpacing:"0.08em" }}>※ 天候により前後する場合があります</p>
       </div>
+
+      {/* ===== INSTAGRAM / MEDIA ===== */}
+      <section id="media" style={{ background:"#faf5ee", padding:"5rem 4rem", textAlign:"center" }}>
+        <p style={{ fontFamily:"'Cormorant Garamond',serif", fontSize:"0.7rem", letterSpacing:"0.28em", color:"#6b7c5e", textTransform:"uppercase", marginBottom:"0.8rem" }}>
+          Featured on Instagram
+        </p>
+        <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:600, lineHeight:1.35, color:"#4a2317", marginBottom:"1.2rem" }}>
+          Instagramで紹介されました！
+        </h2>
+        <div style={{ width:"3rem", height:1, background:"#c06030", margin:"0 auto 1rem" }}/>
+        <p style={{ fontSize:"0.88rem", color:"#7d3c1e", lineHeight:2, marginBottom:"3rem" }}>
+          安城いちじくがInstagramで話題になりました。<br/>ぜひご覧ください🍒
+        </p>
+
+        {/* Instagram埋め込みカード */}
+        <div style={{
+          display:"inline-block",
+          background:"white",
+          border:"1px solid rgba(74,35,23,0.12)",
+          borderRadius:4,
+          overflow:"hidden",
+          maxWidth:540,
+          width:"100%",
+          boxShadow:"0 4px 24px rgba(74,35,23,0.08)",
+          textAlign:"left",
+        }}>
+          {/* カードヘッダー */}
+          <div style={{ padding:"1rem 1.2rem", borderBottom:"1px solid rgba(74,35,23,0.08)", display:"flex", alignItems:"center", gap:"0.8rem" }}>
+            <div style={{ width:36, height:36, borderRadius:"50%", background:"linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)", display:"flex", alignItems:"center", justifyContent:"center", color:"white", fontSize:"1.1rem" }}>
+              📷
+            </div>
+            <div>
+              <div style={{ fontSize:"0.85rem", fontWeight:600, color:"#4a2317" }}>Instagram</div>
+              <div style={{ fontSize:"0.72rem", color:"#6b7c5e" }}>@安城いちじく</div>
+            </div>
+            <a href="https://www.instagram.com/p/DPJSfBbjf-I/?igsh=ajE3amdmMmwzMTlp"
+              target="_blank" rel="noopener noreferrer"
+              style={{ marginLeft:"auto", background:"linear-gradient(135deg,#f09433,#dc2743,#bc1888)", color:"white", padding:"0.4rem 1rem", borderRadius:2, fontSize:"0.72rem", letterSpacing:"0.1em", textDecoration:"none", fontFamily:"inherit" }}>
+              投稿を見る
+            </a>
+          </div>
+
+          {/* 投稿プレビューエリア */}
+          <div style={{ position:"relative", background:"#f5ece0", minHeight:200, display:"flex", alignItems:"center", justifyContent:"center", flexDirection:"column", gap:"1rem", padding:"2.5rem 2rem" }}>
+            <div style={{ fontSize:"3rem" }}>🍒</div>
+            <p style={{ fontSize:"0.9rem", color:"#7d3c1e", lineHeight:1.9, textAlign:"center", maxWidth:380 }}>
+              安城いちじくがInstagramで紹介されました！<br/>
+              旬の美味しさ、ぜひチェックしてください。
+            </p>
+            <a href="https://www.instagram.com/p/DPJSfBbjf-I/?igsh=ajE3amdmMmwzMTlp"
+              target="_blank" rel="noopener noreferrer"
+              style={{ display:"inline-flex", alignItems:"center", gap:"0.4rem", background:"white", color:"#4a2317", padding:"0.7rem 1.8rem", border:"1px solid rgba(74,35,23,0.2)", borderRadius:2, fontSize:"0.82rem", letterSpacing:"0.1em", textDecoration:"none", fontFamily:"inherit", transition:"all 0.2s" }}>
+              📸 Instagramで投稿を見る
+            </a>
+          </div>
+
+          {/* カードフッター */}
+          <div style={{ padding:"0.9rem 1.2rem", borderTop:"1px solid rgba(74,35,23,0.08)", display:"flex", alignItems:"center", gap:"1rem" }}>
+            <span style={{ fontSize:"0.75rem", color:"#6b7c5e", letterSpacing:"0.05em" }}>❤️ いいね！</span>
+            <span style={{ fontSize:"0.75rem", color:"#6b7c5e", letterSpacing:"0.05em" }}>💬 コメント</span>
+            <a href="https://www.instagram.com/p/DPJSfBbjf-I/?igsh=ajE3amdmMmwzMTlp"
+              target="_blank" rel="noopener noreferrer"
+              style={{ marginLeft:"auto", fontSize:"0.72rem", color:"#c06030", textDecoration:"none", letterSpacing:"0.05em" }}>
+              投稿全文を読む →
+            </a>
+          </div>
+        </div>
+
+        {/* Instagramフォローボタン */}
+        <div style={{ marginTop:"2rem" }}>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+            style={{ display:"inline-flex", alignItems:"center", gap:"0.5rem", background:"linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)", color:"white", padding:"0.8rem 2rem", borderRadius:2, fontSize:"0.82rem", letterSpacing:"0.12em", textDecoration:"none", fontFamily:"inherit" }}>
+            📷 Instagramをフォローする
+          </a>
+        </div>
+      </section>
 
       {/* ===== CTA ===== */}
       <section id="buy" style={{ background:"#f5ece0", textAlign:"center", padding:"7rem 4rem" }}>
